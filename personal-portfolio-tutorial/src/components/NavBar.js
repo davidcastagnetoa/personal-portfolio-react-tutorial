@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react";
-import { Navbar, Container } from "react-bootstrap";
-import logo from '../assets/img/logo.svg'
-import navIcon1 from '../assets/img/nav-icon1.svg'
-import navIcon2 from '../assets/img/nav-icon2.svg'
-import navIcon3 from '../assets/img/nav-icon3.svg'
+import { Navbar, Container, Nav } from "react-bootstrap";
+import logo from "../assets/img/logo.svg";
+import navIcon1 from "../assets/img/nav-icon1.svg";
+import navIcon2 from "../assets/img/nav-icon2.svg";
+import navIcon3 from "../assets/img/nav-icon3.svg";
 
-export const navBar = () => {
+export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
-  const [scolled, seScrolled] = useState(false);
+  const [scrolled, seScrolled] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
-        setScrolled(true);
+        seScrolled(true);
       } else {
-        setScrolled(false);
+        seScrolled(false);
       }
     };
 
@@ -23,9 +23,9 @@ export const navBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const onUpdateActiveLink = (value) =>{
+  const onUpdateActiveLink = (value) => {
     setActiveLink(value);
-  }
+  };
 
   return (
     <Navbar bg="light" expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -70,7 +70,11 @@ export const navBar = () => {
             <div className="social-icon">
               <a href="#">
                 <img src={navIcon1} alt="" />
+              </a>
+              <a href="#">
                 <img src={navIcon2} alt="" />
+              </a>
+              <a href="#">
                 <img src={navIcon3} alt="" />
               </a>
             </div>
