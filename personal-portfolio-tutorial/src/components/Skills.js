@@ -58,7 +58,7 @@ return (
                 </Col>
             </Row>
         </Container>
-        <img className="background-image-left" src={colorSharp}/>
+        <img className="background-image-left" src={colorSharp}  alt=""/>
     </section>
   )
 }
