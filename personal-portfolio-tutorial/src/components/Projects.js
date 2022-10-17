@@ -9,37 +9,49 @@ import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
     
-    const projects = [
+    const moonshot = [
         {
-            title: "Business Startup",
+            title: "Moonshot Guide",
             description: "Design & Development",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
+            title: "Moonshot Guide",
             description: "Design & Development",
             imgUrl: projImg2,
         },
         {
-            title: "Business Startup",
+            title: "Moonshot Guide",
             description: "Design & Development",
             imgUrl: projImg3,
         },
         {
-            title: "Business Startup",
+            title: "Moonshot Guide",
             description: "Design & Development",
             imgUrl: projImg1,
         },
         {
-            title: "Business Startup",
+            title: "Moonshot Guide",
             description: "Design & Development",
             imgUrl: projImg2,
         },
         {
-            title: "Business Startup",
+            title: "Moonshot Guide",
             description: "Design & Development",
             imgUrl: projImg3,
         },
+    ]
+    const gestorDescansos = [
+        {
+            title: "Relax Timer",
+            description: "Software for desktop built in PySide 2 QT Designer",
+            imgUrl: projImg1,
+        },
+        {
+            title: "Relax Timer",
+            description: "Software for desktop built in PySide 2 QT Designer",
+            imgUrl: projImg2,
+        }
     ]
     return (
         <section className="project" id="projects">
@@ -52,39 +64,50 @@ export const Projects = () => {
                     <h2>Projects</h2>
                     <p>Projects WIP.</p>
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                        <Nav.Item>
-                        <Nav.Link eventKey="first">Alarm System</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="second">Desktop software</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="third">Others</Nav.Link>
-                        </Nav.Item>
-                    </Nav>
-                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                        <Tab.Pane eventKey="first">
-                        <Row>
-                            {
-                            projects.map((project, index) => {
-                                return (
-                                <ProjectCard
-                                    key={index}
-                                    {...project}
-                                    />
-                                )
-                            })
-                            }
-                        </Row>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="section">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                        </Tab.Pane>
-                        <Tab.Pane eventKey="third">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                        </Tab.Pane>
-                    </Tab.Content>
+                        <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                            <Nav.Item>
+                                <Nav.Link eventKey="first">Alarm System</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="second">For Desktop</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="third">Others</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                        <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                            <Tab.Pane eventKey="first">
+                                <Row>
+                                    {
+                                    moonshot.map((project, index) => {
+                                        return (
+                                        <ProjectCard
+                                            key={index}
+                                            {...project}
+                                            />
+                                        )
+                                    })
+                                    }
+                                </Row>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="second">
+                            <Row>
+                                    {
+                                    gestorDescansos.map((project, index) => {
+                                        return (
+                                        <ProjectCard
+                                            key={index}
+                                            {...project}
+                                            />
+                                        )
+                                    })
+                                    }
+                                </Row>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="third">
+                                <p>Lorem eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                            </Tab.Pane>
+                        </Tab.Content>
                     </Tab.Container>
                 </div>}
                 </TrackVisibility>

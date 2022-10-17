@@ -103,14 +103,15 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
-  --bs-bg-opacity: 0; /* Revisar en bootstrap, grey banner */
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  /* background-color: #121212; */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 nav.navbar a.navbar-brand {
-  width: 9%;
+  width: 18%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -647,7 +648,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 18px;
 }
 .footer img {
-  width: 26%;
+  width: 40%;
 }
 .footer p {
   font-weight: 400;

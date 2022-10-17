@@ -50,8 +50,8 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="align-item-center">
-          <Col xs={12} md={6} xl={7}>
+        <Row className="align-item-center justify-content-between">
+          <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
