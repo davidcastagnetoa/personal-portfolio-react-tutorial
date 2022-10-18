@@ -46,6 +46,10 @@ export const Banner = () => {
       setIndex(prevIndex => prevIndex + 1);
     }
   }
+
+  function goToContact() {
+    window.location.hash = '#connect';
+  }
   
   return (
     <section className="banner" id="home">
@@ -74,14 +78,12 @@ export const Banner = () => {
                     Student Full Stack Web Develompent from Bottega DevCamp,
                     currently studying Cybersecurity in Masterschool.
                   </p>
-                  <button
-                    onClick={() => {
-                      console.log("connect");
-                    }}
-                  >
-                    Contact me
-                    <ArrowRightCircle size={25} />
-                  </button>
+                    <button
+                      onClick={goToContact}
+                    >
+                      Contact me
+                      <ArrowRightCircle size={25} />
+                    </button>
                 </div>
               )}
             </TrackVisibility>

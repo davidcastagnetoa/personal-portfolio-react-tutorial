@@ -28,6 +28,10 @@ export const NavBar = () => {
     setActiveLink(value);
   };
 
+  function goToContact() {
+    window.location.hash = '#connect';
+  }
+
   return (
     <Router>
       <Navbar expand="md" className={ scrolled ? "scrolled" : ""}>
@@ -80,9 +84,9 @@ export const NavBar = () => {
                   <img src={navIcon4} alt="Icon" />
                 </a>
               </div>
-              <button className="vvd" onClick={() => console.log("connect")}>
-                <span>Contact me</span>
-              </button>
+                <button className="vvd" onClick={goToContact}>
+                  <span>Contact me</span>
+                </button>
             </span>
           </Navbar.Collapse>
         </Container>
